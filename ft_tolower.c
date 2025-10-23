@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 12:40:07 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/22 16:49:02 by rsoares-         ###   ########.fr       */
+/*   Created: 2025/10/22 23:16:51 by rsoares-          #+#    #+#             */
+/*   Updated: 2025/10/22 23:18:54 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n) // Trade the n first bytes of the memory area pointed by s for the byte c
+int	ft_tolower(int c)
 {
-	unsigned char	*p;
-
-	p = s;
-	while (n-- > 0)
-		*p++ =	c;
-	return (s);
+	if (c >= 65 && c <= 90)
+		return(c + 32);
+	return(c);
 }
 
-/*
 int	main(void)
 {
-	char	str[] = "Hello World!";
-	printf("%s", ft_memset(str, '*', 5));
+	char	c[] = "a";
+	printf("%s", ft_tolower(c));
 }
-*/

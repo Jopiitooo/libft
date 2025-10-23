@@ -1,31 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 12:40:07 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/22 16:49:02 by rsoares-         ###   ########.fr       */
+/*   Created: 2025/10/22 21:22:20 by rsoares-          #+#    #+#             */
+/*   Updated: 2025/10/22 22:25:28 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n) // Trade the n first bytes of the memory area pointed by s for the byte c
+size_t	ft_strlcpy(char *dest, const char *src, size_t dsize)
 {
-	unsigned char	*p;
-
-	p = s;
-	while (n-- > 0)
-		*p++ =	c;
-	return (s);
+	size_t	lenght;
+	size_t	i;
+	
+	while (src[lenght])
+		lenght++;
+	if (lenght + 1 < dsize)
+	{
+		while (i <= lenght)
+			dest[i++] = src[i++];
+	}
+	else if (dsize != 0)
+	{
+		while (i < dsize)
+			dest[i++] = src[i++];
+		dest[i++] = '\0';
+	}
+	return (lenght);
 }
 
 /*
 int	main(void)
 {
-	char	str[] = "Hello World!";
-	printf("%s", ft_memset(str, '*', 5));
+	char	s1[] = "Miau miau haha";
+	char	s2[20];
+
+	printf("%lu", ft_strlcpy(s2, s1, 5));
 }
 */

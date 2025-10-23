@@ -1,33 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 14:40:35 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/22 16:26:11 by rsoares-         ###   ########.fr       */
+/*   Created: 2025/10/23 18:23:39 by rsoares-          #+#    #+#             */
+/*   Updated: 2025/10/23 18:46:09 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s) // Return the size of the string
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
-	
+	size_t	j;
+
 	i = 0;
-	while (s[i])
+	j = 0;
+	if (needle[i] == '\0')
+		return ((char *) &haystack[i]);
+	while (haystack && i < len)
+	{
+		while (haystack && haystack[i + j] == needle [j] && i + j < len)
+		{
+			j++;
+			if (needle[j] == '\0')
+				return ((char *) &haystack[i]);
+		}
 		i++;
-	return (i);
+		j = 0;
+	}
+	return (0);
 }
 
 /*
-int	main(int ac, char **av)
+int	main(void)
 {
-	if (ac == 2)
-	{
-		printf("%s - tem %lu characters", av[1], ft_strlen(av[1]));
-	}
+	char	s1[] = "miau miau frog frog au au";
+	char	s2[1];
+	printf("%s", ft_strnstr(s1, s2, 14));
 }
 */

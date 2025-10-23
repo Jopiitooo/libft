@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 12:40:07 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/22 16:49:02 by rsoares-         ###   ########.fr       */
+/*   Created: 2025/10/23 20:14:08 by rsoares-          #+#    #+#             */
+/*   Updated: 2025/10/23 20:31:02 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n) // Trade the n first bytes of the memory area pointed by s for the byte c
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*p;
-
-	p = s;
-	while (n-- > 0)
-		*p++ =	c;
-	return (s);
+	unsigned char	*temp;
+	size_t	i;
+	
+	temp = malloc(count * size);
+	if (!temp)
+		return(NULL);
+	while (i < count * size)
+		temp[i++] = 0;
+	return (temp);
 }
 
 /*
 int	main(void)
 {
-	char	str[] = "Hello World!";
-	printf("%s", ft_memset(str, '*', 5));
+	printf("%s", ft_calloc(2, 5));
 }
 */

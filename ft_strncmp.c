@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 12:40:07 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/22 16:49:02 by rsoares-         ###   ########.fr       */
+/*   Created: 2025/10/23 16:14:53 by rsoares-          #+#    #+#             */
+/*   Updated: 2025/10/23 16:29:03 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n) // Trade the n first bytes of the memory area pointed by s for the byte c
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned char	*p;
+	size_t	i;
 
-	p = s;
-	while (n-- > 0)
-		*p++ =	c;
-	return (s);
+	i = 0;
+	while (i < n)
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (s1[i] - s2[i]);
 }
 
 /*
 int	main(void)
 {
-	char	str[] = "Hello World!";
-	printf("%s", ft_memset(str, '*', 5));
+	char	s1[] = "arro";
+	char	s2[] = "arroz";
+	printf("%i", ft_strncmp(s1, s2, 4));
 }
 */

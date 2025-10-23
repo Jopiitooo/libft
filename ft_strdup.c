@@ -1,31 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 12:40:07 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/22 16:49:02 by rsoares-         ###   ########.fr       */
+/*   Created: 2025/10/23 20:33:46 by rsoares-          #+#    #+#             */
+/*   Updated: 2025/10/23 20:53:01 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n) // Trade the n first bytes of the memory area pointed by s for the byte c
+char	*ft_strdup(const char *s1)
 {
-	unsigned char	*p;
-
-	p = s;
-	while (n-- > 0)
-		*p++ =	c;
-	return (s);
+	size_t	len;
+	size_t	i;
+	char	*dest;
+	
+	len = 0;
+	while(s1[len])
+		len++;
+	dest = (char *) malloc(sizeof(char) * len + 1);
+	if (!dest)
+		return (NULL);
+	i = 0;
+	while (s1[i])
+	{
+		dest[i] = s1[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 
 /*
 int	main(void)
 {
-	char	str[] = "Hello World!";
-	printf("%s", ft_memset(str, '*', 5));
+	char	s1[] = "Arroz de pato";
+	printf("%s", ft_strdup(s1));
 }
 */

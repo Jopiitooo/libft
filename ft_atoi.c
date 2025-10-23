@@ -1,31 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 12:40:07 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/22 16:49:02 by rsoares-         ###   ########.fr       */
+/*   Created: 2025/10/23 18:47:38 by rsoares-          #+#    #+#             */
+/*   Updated: 2025/10/23 18:58:22 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n) // Trade the n first bytes of the memory area pointed by s for the byte c
+int	ft_atoi(const char *str)
 {
-	unsigned char	*p;
-
-	p = s;
-	while (n-- > 0)
-		*p++ =	c;
-	return (s);
+	unsigned int	i;
+	int	sign;
+	int	res;
+	
+	i = 0;
+	sign = 1;
+	res = 0;
+	while (str[i] == 32 || (str[i] >= 7 && str[i] <= 13))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = (res * 10) + (str[i] - '0');
+		i++;	
+	}
+	return (sign * res);
 }
 
 /*
 int	main(void)
 {
-	char	str[] = "Hello World!";
-	printf("%s", ft_memset(str, '*', 5));
+	char	s1[] = " 	 	-+5432dvf34";
+	printf("%i", ft_atoi(s1));
 }
 */
