@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rsoares- <rsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 16:04:35 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/23 16:12:33 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/10/24 15:59:56 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,10 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
+/*
 int	main(void)
 {
 	char	s1[] = "arroz de pato";
 	printf("%s", ft_strrchr(s1, 'o'));
 }
+*/

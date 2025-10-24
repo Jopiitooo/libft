@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rsoares- <rsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 18:23:39 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/23 18:46:09 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/10/24 16:40:18 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 int	main(void)
 {
 	char	s1[] = "miau miau frog frog au au";
-	char	s2[1];
+	char	s2[] = "frog";
 	printf("%s", ft_strnstr(s1, s2, 14));
 }
 */

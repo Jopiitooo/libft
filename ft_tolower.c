@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rsoares- <rsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 23:16:51 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/22 23:18:54 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/10/24 17:17:17 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ int	ft_tolower(int c)
 	return(c);
 }
 
+/*
 int	main(void)
 {
 	char	c[] = "a";
-	printf("%s", ft_tolower(c));
+	printf("%c", ft_tolower(c));
 }
+*/

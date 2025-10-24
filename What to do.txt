@@ -1,3 +1,3 @@
 Entender bzero e memmove;
-Fazer a main do toupper, tolower and strchr;
 entender como usar o calloc;
+porque de o meu strtrim estar a dar 
