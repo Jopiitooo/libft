@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 16:27:07 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/11/07 14:37:30 by rsoares-         ###   ########.fr       */
+/*   Created: 2025/11/07 11:12:20 by jopito            #+#    #+#             */
+/*   Updated: 2025/11/07 12:25:48 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	ft_memset(s, '\0', n);
-}
-
-int	main(void)
-{
-	char	*s;
-	s = "Hello World!";
-	ft_bzero(s, 5);
-	printf("%s", s);
-	return (0);
+	t_list	*new_list;
+	t_list	*new_obj;
+	
+	if (!lst || !f || !del)
+		return (NULL);
+	new_list = NULL;
+	while (lst)
+	{
+		new_obj = ft_lstnew(lst->content);
+		if (!new_obj)
+		{
+			ft_lstclear(&new_list, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_list, new_obj);
+		lst = lst->next;
+	}
+	return (new_list);
 }

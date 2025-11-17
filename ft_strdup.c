@@ -6,7 +6,7 @@
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 20:33:46 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/23 20:53:01 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/10/25 10:33:48 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ char	*ft_strdup(const char *s1)
 	size_t	i;
 	char	*dest;
 	
-	len = 0;
-	while(s1[len])
-		len++;
+	len = ft_strlen(s1);
 	dest = (char *) malloc(sizeof(char) * len + 1);
 	if (!dest)
 		return (NULL);

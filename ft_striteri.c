@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 16:27:07 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/11/07 14:37:30 by rsoares-         ###   ########.fr       */
+/*   Created: 2025/10/25 17:56:20 by rsoares-          #+#    #+#             */
+/*   Updated: 2025/10/25 18:12:21 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	ft_memset(s, '\0', n);
+	unsigned int	i;
+
+	i = 0;
+	while (i < ft_strlen(s))
+	{
+		(*f)(i, &s[i]);
+		i++;
+	}
 }
 
 int	main(void)
 {
-	char	*s;
-	s = "Hello World!";
-	ft_bzero(s, 5);
-	printf("%s", s);
-	return (0);
+	char	str[] = "arroz de pato";
+	printf("%c", ft_striteri(str, ft_toupper));
 }

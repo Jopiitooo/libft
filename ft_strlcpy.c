@@ -6,7 +6,7 @@
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 21:22:20 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/22 22:25:28 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/10/25 10:44:09 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dsize)
 	size_t	lenght;
 	size_t	i;
 	
-	while (src[lenght])
-		lenght++;
+	i = 0;
+	lenght = ft_strlen(src);
 	if (lenght + 1 < dsize)
 	{
 		while (i <= lenght)
@@ -33,7 +33,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dsize)
 	return (lenght);
 }
 
-/*
+
 int	main(void)
 {
 	char	s1[] = "Miau miau haha";
@@ -41,4 +41,3 @@ int	main(void)
 
 	printf("%lu", ft_strlcpy(s2, s1, 5));
 }
-*/

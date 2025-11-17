@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: jopito <jopito@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 22:30:47 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/22 23:07:58 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/11/05 14:59:29 by jopito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t dsize)
 {
+	size_t	i;
 	
 }

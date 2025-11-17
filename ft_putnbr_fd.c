@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsoares- <rsoares-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jopito <jopito@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 15:15:34 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/27 15:30:19 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/11/07 11:08:01 by jopito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <fcntl.h>
 
-void	print_number(int nbr, int fd)
+static void	print_number(int nbr, int fd)
 {
 	char	numbers[] = "0123456789";
 	
-	write(1, &numbers[nbr], 1);
+	write(fd, &numbers[nbr], 1);
 }
 
 void	ft_putnbr_fd(int n, int fd)

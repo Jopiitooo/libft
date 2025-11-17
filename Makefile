@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rsoares- <rsoares-@student.42.fr>          +#+  +:+       +#+         #
+#    By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/17 13:33:31 by jopito            #+#    #+#              #
-#    Updated: 2025/10/27 16:44:47 by rsoares-         ###   ########.fr        #
+#    Updated: 2025/11/12 16:05:26 by rsoares-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft
+NAME = libft.a
 CCFLAGS = cc -Wall -Werror -Wextra
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
@@ -19,7 +19,7 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c \
 			ft_strtrim.c ft_slipt.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-SCRBONUS =
+SCRBONUS = 
 OBJ = $(SRC: %.c=%.o)
 OBJBONUS = $(SCRBONUS: %.c=%.o)
 
@@ -27,4 +27,3 @@ all: $(NAME)
 
 
 .PHONY = all clean fclean
-

@@ -1,37 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jopito <jopito@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 17:43:45 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/11/05 15:09:54 by jopito           ###   ########.fr       */
+/*   Created: 2025/10/29 21:51:20 by jopito            #+#    #+#             */
+/*   Updated: 2025/10/29 22:01:51 by jopito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memmove(void *dest, const void *src, size_t n)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    char	*psrc;
-	char	*pdest;
-	size_t	i;
+	del(lst->content);
+	free(lst);
+}
 
-	if (!dest && !src)
-		return (NULL);
-	psrc = (char *) src;
-	pdest = (char *) dest;
-	i = 0;
-	if (pdest > psrc)
-	{
-		while (n-- > 0)
-			pdest[n] = psrc[n];
-	}
-	else
-	{
-		while (i++ < n)
-			pdest[i] = psrc[i];
-	}
-	return (dest);
+int	main(void)
+{
+	
 }
