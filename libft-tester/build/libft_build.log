@@ -1,0 +1,145 @@
+ft_strlcpy.c:25:10: warning: multiple unsequenced modifications to 'i' [-Wunsequenced]
+                        dest[i++] = src[i++];
+                              ^          ~~
+ft_strlcpy.c:30:10: warning: multiple unsequenced modifications to 'i' [-Wunsequenced]
+                        dest[i++] = src[i++];
+                              ^          ~~
+2 warnings generated.
+ft_strlcpy.c:25:10: warning: multiple unsequenced modifications to 'i' [-Wunsequenced]
+                        dest[i++] = src[i++];
+                              ^          ~~
+ft_strlcpy.c:30:10: warning: multiple unsequenced modifications to 'i' [-Wunsequenced]
+                        dest[i++] = src[i++];
+                              ^          ~~
+2 warnings generated.
+ft_strlcpy.c:25:10: warning: multiple unsequenced modifications to 'i' [-Wunsequenced]
+                        dest[i++] = src[i++];
+                              ^          ~~
+ft_strlcpy.c:30:10: warning: multiple unsequenced modifications to 'i' [-Wunsequenced]
+                        dest[i++] = src[i++];
+                              ^          ~~
+2 warnings generated.
+ft_strlcpy.c:25:10: warning: multiple unsequenced modifications to 'i' [-Wunsequenced]
+                        dest[i++] = src[i++];
+                              ^          ~~
+ft_strlcpy.c:30:10: warning: multiple unsequenced modifications to 'i' [-Wunsequenced]
+                        dest[i++] = src[i++];
+                              ^          ~~
+2 warnings generated.
+Setting locale to en_US
+libft.h: OK!
+Setting locale to en_US
+ft_atoi.c: OK!
+Setting locale to en_US
+ft_bzero.c: OK!
+Setting locale to en_US
+ft_calloc.c: OK!
+Setting locale to en_US
+ft_isalnum.c: OK!
+Setting locale to en_US
+ft_isalpha.c: OK!
+Setting locale to en_US
+ft_isascii.c: OK!
+Setting locale to en_US
+ft_isdigit.c: OK!
+Setting locale to en_US
+ft_isprint.c: OK!
+Setting locale to en_US
+ft_memchr.c: OK!
+Setting locale to en_US
+ft_memcmp.c: OK!
+Setting locale to en_US
+ft_memcpy.c: OK!
+Setting locale to en_US
+ft_memmove.c: OK!
+Setting locale to en_US
+ft_memset.c: OK!
+Setting locale to en_US
+ft_strchr.c: OK!
+Setting locale to en_US
+ft_strdup.c: OK!
+Setting locale to en_US
+ft_strlcat.c: OK!
+Setting locale to en_US
+ft_strlcpy.c: OK!
+Setting locale to en_US
+ft_strlen.c: OK!
+Setting locale to en_US
+ft_strncmp.c: OK!
+Setting locale to en_US
+ft_strnstr.c: OK!
+Setting locale to en_US
+ft_strrchr.c: OK!
+Setting locale to en_US
+ft_tolower.c: OK!
+Setting locale to en_US
+ft_toupper.c: OK!
+Setting locale to en_US
+ft_itoa.c: OK!
+Setting locale to en_US
+ft_putchar_fd.c: OK!
+Setting locale to en_US
+ft_putendl_fd.c: OK!
+Setting locale to en_US
+ft_putnbr_fd.c: Error!
+Error: DECL_ASSIGN_LINE     (line:  18, col:  23):	Declaration and assignation on a single line
+Setting locale to en_US
+ft_putstr_fd.c: OK!
+Part2/main_ft_split.c:70:9: error: implicit declaration of function 'ft_split' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                sub = ft_split(s1, s2);
+                      ^
+Part2/main_ft_split.c:70:9: note: did you mean 'ft_slipt'?
+Part2/../../libft.h:53:8: note: 'ft_slipt' declared here
+char    **ft_slipt(const char *s, char c);
+          ^
+Part2/main_ft_split.c:70:7: error: incompatible integer to pointer conversion assigning to 'char **' from 'int' [-Werror,-Wint-conversion]
+                sub = ft_split(s1, s2);
+                    ^ ~~~~~~~~~~~~~~~~
+Part2/main_ft_split.c:145:9: error: implicit declaration of function 'ft_split' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                sub = ft_split(s1, s2);
+                      ^
+Part2/main_ft_split.c:145:7: error: incompatible integer to pointer conversion assigning to 'char **' from 'int' [-Werror,-Wint-conversion]
+                sub = ft_split(s1, s2);
+                    ^ ~~~~~~~~~~~~~~~~
+Part2/main_ft_split.c:220:9: error: implicit declaration of function 'ft_split' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                sub = ft_split(s1, s2);
+                      ^
+Part2/main_ft_split.c:220:7: error: incompatible integer to pointer conversion assigning to 'char **' from 'int' [-Werror,-Wint-conversion]
+                sub = ft_split(s1, s2);
+                    ^ ~~~~~~~~~~~~~~~~
+Part2/main_ft_split.c:292:9: error: implicit declaration of function 'ft_split' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                sub = ft_split(s1, s2);
+                      ^
+Part2/main_ft_split.c:292:7: error: incompatible integer to pointer conversion assigning to 'char **' from 'int' [-Werror,-Wint-conversion]
+                sub = ft_split(s1, s2);
+                    ^ ~~~~~~~~~~~~~~~~
+Part2/main_ft_split.c:366:9: error: implicit declaration of function 'ft_split' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                sub = ft_split(s1, s2);
+                      ^
+Part2/main_ft_split.c:366:7: error: incompatible integer to pointer conversion assigning to 'char **' from 'int' [-Werror,-Wint-conversion]
+                sub = ft_split(s1, s2);
+                    ^ ~~~~~~~~~~~~~~~~
+10 errors generated.
+Setting locale to en_US
+ft_striteri.c: OK!
+Setting locale to en_US
+ft_strjoin.c: OK!
+Setting locale to en_US
+ft_strmapi.c: OK!
+Setting locale to en_US
+ft_strnstr.c: OK!
+Setting locale to en_US
+ft_strtrim.c: OK!
+Setting locale to en_US
+ft_substr.c: OK!
+ft_lstclear_bonus.c:22:3: warning: implicit declaration of function 'ft_delone' is invalid in C99 [-Wimplicit-function-declaration]
+                ft_delone(*lst, del);
+                ^
+1 warning generated.
+ft_lstsize_bonus.c:27:9: warning: incompatible integer to pointer conversion returning 'int' from a function with result type 'int *'; take the address with & [-Wint-conversion]
+        return (i);
+               ^~~
+               &
+1 warning generated.
+ar: ft_isalpha.o: No such file or directory
+make: *** [Makefile:42: bonus] Error 1

@@ -6,7 +6,7 @@
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 17:56:20 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/25 18:12:21 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/11/17 14:54:02 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,4 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		(*f)(i, &s[i]);
 		i++;
 	}
-}
-
-int	main(void)
-{
-	char	str[] = "arroz de pato";
-	printf("%c", ft_striteri(str, ft_toupper));
 }

@@ -6,7 +6,7 @@
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 21:10:13 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/23 21:31:38 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/11/17 15:27:16 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	int	i;
+	int		i;
 	char	*str;
-	
+
 	if (!s)
 		return (NULL);
 	str = (char *) malloc(sizeof(char) * len);
@@ -29,11 +29,3 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	}
 	return (str);
 }
-
-/*
-int	main(void)
-{
-	char	s1[] = "Arroz de pato";
-	printf("%s", ft_substr(s1, 6, 5));
-}
-*/

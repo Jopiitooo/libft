@@ -6,7 +6,7 @@
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 16:34:19 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/25 17:13:52 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/11/17 15:05:50 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ static int	lenght_int(long int nbr)
 char	*ft_itoa(int n)
 {
 	long int	nbr;
-	int	lenght;
-	char	*res;
-	int	i;
+	int			lenght;
+	char		*res;
+	int			i;
 
 	nbr = n;
 	lenght = lenght_int(nbr);
@@ -59,12 +59,3 @@ char	*ft_itoa(int n)
 	res[lenght] = '\0';
 	return (res);
 }
-
-/*
-int	main(void)
-{
-	int	a = 1234;
-	int	b = -98765432;
-	printf("%s\n%s", ft_itoa(a), ft_itoa(b));
-}
-*/

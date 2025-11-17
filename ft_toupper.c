@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsoares- <rsoares-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 23:09:36 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/24 17:17:03 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/11/17 15:14:11 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,6 @@
 int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
-		return(c - 32);
+		return (c - 32);
 	return (c);
 }
-
-/*
-int	main(void)
-{
-	char	c[] = "a";
-	printf("%c", ft_toupper(c));
-}
-*/

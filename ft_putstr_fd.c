@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsoares- <rsoares-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 14:42:01 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/27 15:00:04 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/11/17 15:13:24 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,11 @@
 void	ft_putstr_fd(char *s, int fd)
 {
 	unsigned int	i;
-	
+
 	i = 0;
 	while (s[i])
 	{
 		write(fd, &s[i], 1);
 		i++;
 	}
-}
-
-int	main(void)
-{
-	
 }

@@ -6,7 +6,7 @@
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 15:26:08 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/25 10:39:48 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/11/17 15:26:53 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static	int	to_trim(const char *set, char c)
 	return (0);
 }
 
-char	*ft_strtrim (const char *s1, const char *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
 	char	*trimed;
 	size_t	i;
@@ -45,12 +45,3 @@ char	*ft_strtrim (const char *s1, const char *set)
 		return (NULL);
 	return (trimed);
 }
-
-/*
-int	main(void)
-{
-	char	str[] = "abababababMy name is Camilla.abababababababa";
-	char	settings[] = "ab";
-	printf("%s", ft_strtrim(str, settings));
-}
-*/

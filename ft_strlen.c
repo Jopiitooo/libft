@@ -6,7 +6,7 @@
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 14:40:35 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/22 16:26:11 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/11/17 15:25:22 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,9 @@
 size_t	ft_strlen(const char *s) // Return the size of the string
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (s[i])
 		i++;
 	return (i);
 }
-
-/*
-int	main(int ac, char **av)
-{
-	if (ac == 2)
-	{
-		printf("%s - tem %lu characters", av[1], ft_strlen(av[1]));
-	}
-}
-*/

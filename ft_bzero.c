@@ -6,7 +6,7 @@
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:27:07 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/11/07 14:37:30 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/11/17 14:57:21 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,4 @@
 void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, '\0', n);
-}
-
-int	main(void)
-{
-	char	*s;
-	s = "Hello World!";
-	ft_bzero(s, 5);
-	printf("%s", s);
-	return (0);
 }

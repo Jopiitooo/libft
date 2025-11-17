@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jopito <jopito@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 15:15:34 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/11/07 11:08:01 by jopito           ###   ########.fr       */
+/*   Updated: 2025/11/17 15:11:38 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 static void	print_number(int nbr, int fd)
 {
 	char	numbers[] = "0123456789";
-	
+
 	write(fd, &numbers[nbr], 1);
 }
 
@@ -34,9 +34,4 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(nbr / 10, fd);
 		ft_putnbr_fd(nbr % 10, fd);
 	}
-}
-
-int	main(void)
-{
-	
 }

@@ -6,7 +6,7 @@
 /*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 16:14:53 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/23 16:29:03 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/11/17 14:53:38 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (s1[i] - s2[i]);
 }
-
-/*
-int	main(void)
-{
-	char	s1[] = "arro";
-	char	s2[] = "arroz";
-	printf("%i", ft_strncmp(s1, s2, 4));
-}
-*/

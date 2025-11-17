@@ -3,35 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jopito <jopito@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:43:45 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/11/05 15:09:54 by jopito           ###   ########.fr       */
+/*   Updated: 2025/11/17 18:12:27 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-    char	*psrc;
+	char	*psrc;
 	char	*pdest;
-	size_t	i;
 
-	if (!dest && !src)
-		return (NULL);
 	psrc = (char *) src;
 	pdest = (char *) dest;
-	i = 0;
-	if (pdest > psrc)
+	if (pdest < psrc)
 	{
-		while (n-- > 0)
-			pdest[n] = psrc[n];
+		while (n--)
+			*pdest++ = *psrc++;
 	}
 	else
 	{
-		while (i++ < n)
-			pdest[i] = psrc[i];
+		pdest += n;
+		psrc += n;
+		while (n--)
+			*--pdest = *--psrc;
 	}
 	return (dest);
 }

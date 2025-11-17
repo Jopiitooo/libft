@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsoares- <rsoares-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rsoares- <rsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 23:26:36 by rsoares-          #+#    #+#             */
-/*   Updated: 2025/10/24 15:59:13 by rsoares-         ###   ########.fr       */
+/*   Updated: 2025/11/17 15:23:41 by rsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,16 @@ char	*ft_strchr(const char *s, int c)
 {
 	unsigned int	i;
 	char			cc;
-	
+
 	cc = (char) c;
 	i = 0;
 	while (s[i])
 	{
 		if (s[i] == cc)
-			return((char *) &s[i]);
+			return ((char *) &s[i]);
 		i++;
 	}
 	if (s[i] == cc)
 		return ((char *) &s[i]);
 	return (NULL);
 }
-
-/*
-int	main(void)
-{
-	char	s1[] = "arroz de pato";
-	printf("%s", ft_strchr(s1, '\0'));
-}
-*/
